@@ -1,0 +1,49 @@
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-compatible" content="IE-Edge, chrome=1">
+<title>HTML 4일차 4.0-style속성</title>
+</head>
+<body>
+    <!--
+        style: HTML 별도 속성 값이며, 기본단위는 px(pixel)
+        style을 사용하는 이유는: input 외에는 모양 변경이 불가능함
+
+        style: 속성형태
+        -width: 가로길이
+        -height: 세로길이
+        -font-size: 글자 크기
+        -color: 글자 색상
+        -border: 두께, 선 종류(solid:외줄, dotted:점선, dashed:절취선, double: 두줄(3px 이상 사용가능), none: 외각선 사용안함), 색상
+        -border-lefr, border-right, border-top, border-bottom: 각 상하좌우 별로 별도로 선 두께, 색상을 변경
+    -->
+<input type="checkbox" style="width:30px; height:30px;">
+<br>
+<input type="password" style="width: 150px; height:30px;">
+<br>
+<textarea style="width: 400px; height: 60px;"></textarea>
+<br>
+<input type="text" style="width: 300px; height 50px; font-size: 30px; color:red; border: 1px solid red;">
+<br>
+<!--alt: 제작자가 해당 이미지를 가져올 때, 파일명이 올바른지 확인하기 위함. 파일 유/무.-->
+<img src="./d.jpg" title="딸기" alt="d.jpg" style="width: 200px; height: 200px; border: 1px solid blue;">
+<div style="width: 200px; height: 200px; border: 1px solid red;"></div>
+<br><br>
+<input type="text" style="width: 300px; height: 40px; border-top: 1px solid greenyellow; border-left: 1px solid greenyellow; border-bottom: 1px solid green; border-right: 1px solid green;">
+<br>
+<input type="text" style="border: none; border-bottom: 1px solid black;"> @
+    <select style="width: 150; height: 30px; border: none; border-bottom: 1px solid black;">
+        <option>outlook.kr</option>
+        <option>outlook.com</option>
+        <option>hatmail.com</option>
+    </select>
+<br>
+<select style="width: 100px; height: 50; border: none; border-bottom: 1px solid gray;">
+    <option>+82</option>
+    <option>+1</option>
+    <option>+81</option>
+    <option>+86</option>
+</select>&nbsp&nbsp
+<input type="text" placeholder="전화번호" style="width: 300px; height: 50px; border: none; border-bottom: 1px solid gray;">
+</body>
+</html>
