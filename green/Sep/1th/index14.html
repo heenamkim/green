@@ -1,0 +1,34 @@
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-compatible" content="IE=EDge, chrome=1">
+<title>HTML 4일차 4.0 + CSS2.0 - 복습 및 예습</title>
+<style>
+#aaa { width: 200px; height: 30px;} /* #: id를 지칭함 */
+.aaa { width: 500px; height: 30px;} /* .: class를 지칭함 */
+.bbb { width: 100px; height: 30px; background-color:green;}
+.btn { width: 100px; height: 45px; color: white; font-size: 15px; font-weight: bold; background-color: darkblue; border: none; cursor: pointer;}
+.cbtn { width: 100px; height: 45px; color:white; font-size: 15px; font-weight: bold; background-color:  #333; border: none; cursor: pointer;}
+.addressbox { width: 100px; height: 35px; border: 2px solid #219D47;}
+.address { width: 100px; height: 40px; background-color: black; color: white; font-size: 15px; border: none;}
+.addressbox2 { width: 450px; height: 35px; border: 2px solid #219D47;}
+.addressbox3 { width: 450px; height: 35px; border: 2px solid #219D47;}
+</style>
+</head>
+<body>
+<input type="text" id="aaa"><br>
+<input type="text" class="aaa"><br>
+<input type="text" id="bbb" class="bbb"><br>
+<!--
+    name: 백엔드 전달 값(속성) 백엔드가 지정해 준 것만 사용 프론드 엔드가 건드리면 안됨.
+    id: Jquery, Javascript에 사용
+    class: publisher + style
+ -->
+<input type="button" value="회원가입" id="btn" class="btn" title="회원가입">
+<input type="button" value="회원가입" id="cbtn" class="cbtn" title="가입취소"><br>
+<input type="text" class="addressbox" maxlength="5">
+<input type="button" value="주소검색" class="address"><br><br>
+<input type="text" class="addressbox2"><br><br>
+<input type="text" class="addressbox3">
+</body>
+</html>
