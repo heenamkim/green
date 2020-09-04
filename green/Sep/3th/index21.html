@@ -5,20 +5,46 @@
 <title>HTML 4.0 + CSS2.0 (Web아웃라인)</title>
 <style>
     body {margin: 0; padding: 0; }
-    .main { width: 1000px; height: 1600px; border: 1px solid black; margin: 0 auto; position: relative; }
+    .main { width: 1000px; height: auto; border: 1px solid black; margin: 0 auto; position: relative; }
      /*margin:0 auto; 화면 정 가운대로 위치*/
+     /* height: auto; 자식 div에 높이에 맞춰서 자동으로 늘어나도록 하는 기능 */
     .top {width: 100%; height: 50px; background-color: skyblue; position: relative; top: 10px; }
-    .logo { width: 250; height: 50; background-color: #05b9b9; float: left; margin-left: 10px; margin-right: 130px; }
-    .menu { width: 600; height: 50; background-color: #05b9b9; float: left; margin-right: 10px; }
-    .banner { width: 100%; height: 400; background-color: #05b9b9; position: relative; top: 20px; }
-    .middle { width: 100%; height: 300; background-color: skyblue; position: relative; top: 30px; }
-    .board { width: 450; height: 300; background-color: #05b9b9; float: left; margin-left: 10px; margin-right: 80px; }
-    .youtube { width: 450; height: 300; background-color: #05b9b9; float: left; margin-right: 10px; }
-    .corp { width: 950; height: 50; background-color: #05b9b9; position: relative; top: 40px; left: 25px; }
-    .copy { width: 100%; height: 150; background-color: #05b9b9; position: relative; top: 50px; }
+    .logo { width: 250px; height: 50px; background-color: #05b9b9; float: left; margin-left: 10px; margin-right: 130px; }
+    .menu { width: 600px; height: 50px; background-color: #05b9b9; float: left; margin-right: 10px; }
+    .banner { width: 100%; height: 400px; background-color: #05b9b9; position: relative; top: 20px; }
+    .middle { width: 975px; height: 300px; background-color: skyblue; position: static; margin-top: 30px; padding-left: 25px; }
+    .board { width: 450px; height: 300px; background-color: #05b9b9; float: left; margin-right: 50px; }
+    .youtube { width: 450px; height: 300px; background-color: #05b9b9; float: left; }
+    .crop { width: 950px; height: 50px; background-color: #05b9b9; position: relative; top: 10px; margin: 0 auto; }
+    /* margin:0 auto; 사용시 주의사항 margin-top, left, right, bottom 모두 auto 코드 다음에 입력을 해야만 적용됨 */
+    .copy { width: 100%; height: 150px; background-color: #05b9b9; position: static; margin-top: 20px; }
+    .copy_ol { width: 800px; height: 150px; margin: 0 auto; list-style: none; padding: 0; }
+    .copy_ol li {width: 100%; height: 30px; text-align: center; line-height: 32px;}
+    /*
+    클래스 태그 또는 다른 클래스면을 이용하여 중복 클래스를 최소화 하도록 변경되었습니다.
+    ex. .acc div : abc라는 클래스 명 안에 div라는 태그를 원하는 style로 모두 변경하라는 뜻.
+     */
+    .popup { width: 400px; height: auto; background-color: yellowgreen; position: absolute; z-index: 1; top: 100px; left: 300px; display: none; }
+    .popup_ul { width: 100%; height: auto; list-style: none; margin: 0; padding: 0; }
+    .img { width: 400px; } /*이미지 사이즈 조정시 가로 사이즈만 적용!*/
+    .li1 { width: 100%; height: 480px; }
+    .li2 { width: 100%; height: 45px; font-size: 12px; font-family: "돋움체"; position: relative; padding-top: 5px; line-height: 45px; }
+    .btn { width: 80px; height: 40px; background-color: black; font-size: 13px; color: white; font-family: "돋움체"; border: 0; position: absolute; right: 5px; }
 </style>
 </head>
 <body>
+<!-- 레이어 팝업 -->
+<div class="popup">
+<ul class="popup_ul">
+    <li class="li1">
+        <img src="./popup/popup.jpg" class="img">
+    </li> <!--팝업 이미지-->
+    <li class="li2">
+        <input type="checkbox">오늘 하루 그만보기
+        <input type="button" value="창 닫기" class="btn">
+    </li> <!--오늘 팝업 그만보기, 팝업창 닫기-->
+</ul>
+</div>
 <!-- 메인 페이지 아웃라인 -->
 <div class="main">
     <!-- 메인 상단 부분 -->
@@ -41,9 +67,18 @@
     </div>
     <!-- 게시판 및 유튜브 영상 끝 -->
     <!-- 협력사 파트 -->
-    <div class="corp"></div>
-    <!--  -->
-    <div class="copy"></div>
+    <div class="crop"></div>
+    <!-- 협력사 파트 끝 -->
+    <!-- copyright -->
+    <div class="copy">
+        <ol class="copy_ol">
+            <li>(주)종로 그린 컴퓨터 학원</li>
+            <li>대표자 : 홍길동&nbsp;&nbsp;|&nbsp;&nbsp;대표번호 : 02.1234.1234 |&nbsp;&nbsp;사업자번호 : 123-22-123456</li>
+            <li>주소 : 서울특별시 종로구 종로3가 국일빌딩 5F&nbsp;&nbsp;|&nbsp;&nbsp;개인정보책임자 : 홍길동</li>
+            <li>copyright ⓒ 2020 종로 그린 컴퓨터 학원 All rights reserved.</li>
+        </ol>
+    </div>
+    <!-- copyright 끝-->
 </div>
 </body>
 </html>
